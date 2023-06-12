@@ -44,7 +44,7 @@ while(tentativaAtual <= maximoTentativas) {
 
 var idade = parseInt(prompt("Digite sua idade"));
 
-while(isNaN(idade)) {
+while(idade == NaN) {
     idade = parseInt(prompt("Digite sua idade"));    
 }
 

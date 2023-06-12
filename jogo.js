@@ -4,10 +4,23 @@ function escreverNaTela(algumTexto) {
 }
 
 var numero = Math.round(Math.random() * 10);
-var chute = parseInt(prompt("Digite um número de 1 a 10 para adivinhar."));
+var tentativas = 1;
 
-if(chute == numero) {
-    escreverNaTela("Parabéns!!! Você acertou o número.");
-} else {
-    escreverNaTela("Que pena! Você errou. O número pensado foi: " + numero);
+while(tentativas <= 3) {
+
+    var chute = parseInt(prompt("Digite um número de 1 a 10 para adivinhar."));
+
+    if(chute == numero) {
+
+        escreverNaTela("Parabéns!!! Você acertou, o número pensado foi: " + numero);
+        break;
+
+    } else {
+
+        escreverNaTela("Que pena! Você errou!");
+
+    }
+
+    tentativas++;
+
 }
